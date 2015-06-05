@@ -1,0 +1,118 @@
+﻿@model DrivoJoyWebApp.Models.HomeViewModel
+
+@{
+    ViewBag.Title = "DrivoJoy";
+}
+<style type="text/css">
+    .box {
+        height: 100%;
+        position: relative;
+    }
+</style>
+@using (Html.BeginForm("BrowseCars", "Home", FormMethod.Post))
+{
+
+    @*<div style="width:100%;height:550px;"><img src="~/Images/car3.0.jpg" style="width:100%;height:500px" /></div>*@
+    //style="width:100%;background-image:url(http://localhost:32485/images/car3.1.jpg); background-color:gray;background-size:cover;height:100% "
+
+    <div style="width:100%;background-image:url(http://localhost:32485/images/car3.1.jpg); background-color:gray;background-size:cover; ">
+        <div style="height:480px; "></div>
+        <div class="container" style="background-color:whitesmoke;">
+
+            @Html.ValidationSummary(true)
+            <div style="float:left; width:20%; margin-top: 10px; ">
+                @Html.DropDownListFor(m => m.SelectedLocationId, Model.LocationFilter, new { @class = "form-control select" })
+            </div>
+
+            <div style="float:left; width:20%; padding-left:10px;margin-top: 10px;">
+                @Html.DropDownListFor(m => m.SelectedMakeId, Model.MakeFilter, new { @class = "form-control select" })
+            </div>
+
+            <div style="float:left; width:20%; padding-left:10px;margin-top: 10px;">
+                @Html.DropDownListFor(m => m.SelectedBodyTypeId, Model.BodyTypeFilter, new { @class = "form-control select" })
+            </div>
+
+            <div style="float:left; width:20%; padding-left:10px;margin-top: 10px;">
+                @Html.DropDownListFor(m => m.SelectedModelId, Model.ModelFilter, new { @class = "form-control select" })
+            </div>
+
+            <div style="float:right;padding-left:10px;">
+                <input type="submit" value="Browse Cars" class="btn btn-primary" style="background-color:#2D9EFC" />
+            </div>
+        </div>
+    </div>
+
+    @*<div class="element_3">
+        <div style="float:left; width:25%;">
+            <div style="padding:40px; background-color:#f6f6f6;"><img src="~/Images/rocket.jpg" /></div>
+        </div>
+        <div style="float:right;width:75%;">
+            <h2>DriveOJoy is the most fastest and reliable used car market in India</h2>
+            <hr />
+            <p>
+                Our goal is to turn what is universally regarded as a burdensome life event into<br /> a delightful experience,
+                and to bring trust and simplicity to the peer-to-peer used car market.
+            </p>
+            <input type="submit" value="ABOUT US" class="myThirdButton" />                           <!--THE BG IMAGE SHOUD BE ADDED-->
+        </div>
+        <h2 style="align-content:center">How It Works</h2>
+        <h4 style="align-content:center">You Will Never Run Out Of Reasons to Choose Us</h4>
+    </div>
+    <div>
+        <div style="float:left;width:50%;padding-left:400px;">
+            <input type="submit" value="If You Are A Seller" class="myFourthButton" />
+        </div>
+        <div style="float:right;width:50%">
+
+            <input type="submit" value="If You Are A Buyer" class="myFifthButton" />
+
+        </div>
+        <div style="padding-top:80px">
+            <table>
+                <tr style="padding-left:100px;">
+                    <td style="padding-left:20px;padding-right:20px;"><h4>Get A Price Quote</h4></td>
+                    <td style="padding-right:20px;"><h4>Schedule An Inspection</h4></td>
+                    <td style="padding-right:20px;"><h4>We Ready Your Car</h4></td>
+                    <td style="padding-right:20px;"><h4>Let Us Handle The Rest</h4></td>
+                </tr>
+                <tr style="font-size:small;padding-left:100px;">
+                    <td style="padding-right:20px;">Submit your car details and recieve a no<br />obligation price quoute for your car. </td>
+                    <td style="padding-right:20px;">Request a free inspection and we'll send a<br />designated inpsector at your doorstep</td>
+                    <td style="padding-right:20px;">Once you car passes muster, we clean it<br />inside out and take professional pictures.</td>
+                    <td style="padding-right:20px;">We handle all inbound calls, tes drives,<br />negotiations & post sale lengthy paperwork.</td>
+                </tr>
+            </table>
+        </div>
+        <div style="padding-left:500px;padding-top:40px;padding-bottom:15px;">
+
+            <input type="submit" value="LEARN MORE" class="mySixthButton" />
+
+        </div>
+    </div>
+    <div style="color:lavenderblush;font-family:Arial;background-image:url(http://www.blirk.net/wallpapers/1366x768/grand-canyon-wallpaper-5.jpg);width:100%;height:400px;">
+        <h3 style="padding-top:10px;text-align:center;">Testimonials</h3>
+        <h4 style="text-align:center;">Here what people are saying about us!</h4>
+        <div class="transbox" style="float:left;padding-left:20px;width:25%;">
+            <p>Paragraph 1</p>
+        </div>
+        <div class="transbox" style="float:right;padding-left:20px;width:25%;">
+            <p>Paragraph 2</p>
+        </div>
+        <div style="padding-top:250px;padding-left:490px;">
+
+            <input type="submit" value="MORE TESTIMONIALS" class="mySeventhButton" />
+
+        </div>     <!--ADD LINK-->
+    </div>
+    <div class="box">
+        <table>
+            <tr>
+                <td><h2>Featured On:</h2></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRjzvD4Tv1RW3jZ6nwuwfLOcNi4RHhfX4u1fLItGgsOXoBvt17zg" /></td>
+                <td style="padding-left:10px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3D2ucE-j6osdJXRbTYZTdngKLTl_obkboKMk_b4EF4RYaliE2qw" /></td>
+                <td style="padding-left:20px;"><img src="data:image/jpeg;base64,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" /></td>
+                <td style="padding-left:20px;"><img src="data:image/png;base64,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" /></td>
+            </tr>
+        </table>
+    </div>*@
+}   

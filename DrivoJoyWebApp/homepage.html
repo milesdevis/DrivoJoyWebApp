@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivoJoy</title>
+    <link href="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Content\bootstrap.css" rel="stylesheet"/>
+<link href="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Content\bootstrap-social.css" rel="stylesheet"/>
+<link href="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Content\font-awesome.css" rel="stylesheet"/>
+<link href="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Content\site.css" rel="stylesheet"/>
+<link href="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Content\material.css" rel="stylesheet"/>
+<link href="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Content\ripples.css" rel="stylesheet"/>
+<link href="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Content\roboto.css" rel="stylesheet"/>
+<link href="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Content\jquery.dropdown.css" rel="stylesheet"/>
+
+    <script src="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Scripts\modernizr-2.6.2.js"></script>
+
+    <link href="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/css/material-wfont.min.css" rel="stylesheet">
+    <link href="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Scripts\jquery.dropdown.css" rel="stylesheet">
+    
+</head>
+<body style="margin:0px;">
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1118507954831470";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <header>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#3982ac">
+            <div class="container">
+                
+            </div>
+        </div>
+    </header>
+
+    <div>
+        
+<style type="text/css">
+    .box {
+        height: 100%;
+        position: relative;
+    }
+</style>
+<form action="/Home/BrowseCars" method="post">    <div style="width:100%;background-image:url(http://localhost:32485/images/car3.1.jpg); background-color:gray;background-size:cover; ">
+        <div style="height:480px; "></div>
+        <div class="container" style="background-color:whitesmoke;">
+
+            
+            <div style="float:left; width:20%; margin-top: 10px; ">
+                <select class="form-control select" data-val="true" data-val-number="The field Location must be a number." data-val-required="The Location field is required." id="SelectedLocationId" name="SelectedLocationId"><option value="1">Bangalore</option>
+<option value="2">Chennai</option>
+<option value="3">Hyderabad</option>
+<option value="4">Mumbai</option>
+<option value="5">Bangalore</option>
+<option value="6">Chennai</option>
+<option value="7">Hyderabad</option>
+<option value="8">Mumbai</option>
+<option value="9">Bangalore</option>
+<option value="10">Chennai</option>
+<option value="11">Hyderabad</option>
+<option value="12">Mumbai</option>
+</select>
+            </div>
+
+            <div style="float:left; width:20%; padding-left:10px;margin-top: 10px;">
+                <select class="form-control select" data-val="true" data-val-number="The field Make must be a number." data-val-required="The Make field is required." id="SelectedMakeId" name="SelectedMakeId"><option value="1">BMW</option>
+<option value="2">AUDI</option>
+<option value="3">JAGUAR</option>
+<option value="4">BENTLY</option>
+</select>
+            </div>
+
+            <div style="float:left; width:20%; padding-left:10px;margin-top: 10px;">
+                <select class="form-control select" data-val="true" data-val-number="The field BodyType must be a number." data-val-required="The BodyType field is required." id="SelectedBodyTypeId" name="SelectedBodyTypeId"><option value="1">SUV</option>
+<option value="2">Convertible</option>
+<option value="3">Sports</option>
+<option value="4">Automatic</option>
+</select>
+            </div>
+
+            <div style="float:left; width:20%; padding-left:10px;margin-top: 10px;">
+                <select class="form-control select" data-val="true" data-val-number="The field Model must be a number." data-val-required="The Model field is required." id="SelectedModelId" name="SelectedModelId"><option value="1">Blah</option>
+<option value="2">Bloop</option>
+<option value="3">Bleep</option>
+<option value="4">BadumTish</option>
+</select>
+            </div>
+
+            <div style="float:right;padding-left:10px;">
+                <input type="submit" value="Browse Cars" class="btn btn-primary" style="background-color:#2D9EFC" />
+            </div>
+        </div>
+    </div>
+</form>   
+    </div>
+    <div style="background-color:#4A959F;width:100%">
+        <div class="container ">
+            <footer style=" width:100%;background-color:#4A959F;bottom:0px;" >
+                <div style="float: left; width: 25%;">
+                    <ul style="list-style-type:none">
+                        <li style="padding-bottom:10px"><h3>Overview</h3></li>
+                        <li style="padding-bottom:10px"><a href="/Home/Press">Press</a></li>
+                        <li style="padding-bottom:10px"><a href="/Sell">Sell A Car</a></li>
+                        <li style="padding-bottom:10px"><a href="/Buy">Buy A Car</a></li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 25%;">
+                    <ul style="list-style-type:none">
+                        <li style="padding-bottom:10px"><h3>DriveOJoy</h3></li>
+                        <li style="padding-bottom:10px"><a href="/Home/AboutUs">About Us</a></li>
+                        <li style="padding-bottom:10px"><a href="/Home/Jobs">Jobs</a></li>
+                        <li style="padding-bottom:10px"><a href="/Home/Blog">Blog</a></li>
+                        <li style="padding-bottom:10px"><a href="/Home/PrivacyPolicy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 25%;">
+                    <ul style="list-style-type:none">
+
+                        <li style="padding-bottom:10px"><h3>Support</h3></li>
+                        <li style="padding-bottom:10px"><a href="/Home/ContactUs">Contact Us</a></li>
+                        <li style="padding-bottom:10px">Call+91 7259280001</li>
+                    </ul>
+                </div>
+                <div style="float: right; width: 25%; padding-top:50px;">
+                    <ul style="list-style-type:none">
+                        <li style="padding-bottom:10px"><a href="https://support@driveojoy.com/">https://support@driveojoy.com/</a></li>
+                        <li style="padding-bottom:10px"><a href="https://www.facebook.com/driveojoy">https://www.facebook.com/driveojoy</a></li>
+                        <li style="padding-bottom:10px"><a href="https://twitter.com/driveojoy">https://twitter.com/driveojoy</a></li>
+                        <li style="padding-bottom:10px"><a href="https://www.linkedin.com/driveojoy">https://www.linkedin.com/driveojoy</a></li>
+                        <li style="padding-bottom:10px"><a href="https://plus.google.com/driveojoy">https://plus.google.com/driveojoy</a></li>
+                    </ul>
+                    <div class="fb-like" data-href="https://www.facebook.com/pages/DrivoJoy/1430785873891078" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                </div>
+            </footer>
+
+        </div>
+        
+    </div>
+    <script src="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Scripts\jquery-1.10.2.js"></script>
+
+        <script src="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Scripts\bootstrap.js"></script>
+<script src="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Scripts\ripples.js"></script>
+<script src="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Scripts\material.js"></script>
+<script src="E:\DrivieShift\DrivoJoyWebApp\DrivoJoyWebApp\Scripts\jquery.dropdown.js"></script>
+
+        
+        <script src="jquery.dropdown.js"></script>
+        <script>
+            $(document).ready(function () {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+
+                $(document).ready(function () {
+                    $(".select").dropdown({ "optionClass": "withripple" });
+                });
+
+                $().dropdown({ autoinit: "select" });
+            });
+        </script>
+
+        
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Internet Explorer","requestId":"7db2cf18c98e4d8aaa9760393af8d30f"}
+</script>
+<script type="text/javascript" src="http://localhost:13963/fe0601e4f63f486692d104cd9af905fb/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>

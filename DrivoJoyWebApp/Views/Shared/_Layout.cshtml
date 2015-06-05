@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/css/material-wfont.min.css" rel="stylesheet">
+    @*<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>*@
+</head>
+<body style="margin:0px;">
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1118507954831470";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <header>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#3982ac">
+            <div class="container">
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><div class="text">@Html.ActionLink("LOGO", "Index", "Home")</div></li>                  <!--Insert Logo Image here-->
+                        <li><div class="text">+91 7259 28 0001</div></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><div class="text">@Html.ActionLink("About Us", "AboutUs", "Home")</div></li>
+                        <li><div class="text">@Html.ActionLink("How It Works", "HowItWorks", "Home")</div></li>
+                        <li><div class="text">@Html.ActionLink("Login", "Login", "Account")</div></li>
+                        <li><div class="text" style="padding-right:10px;">@Html.ActionLink("Buy", "Index", "Buy")</div></li>
+                        <li>
+                           
+                                <input type="submit" value="Sell Your Car" class="btn btn-primary" />
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+    <div style="background-color:#4A959F;width:100%;bottom:0px;">
+        <div class="container ">
+            <footer style=" width:100%;background-color:#4A959F;" >
+                <div style="float: left; width: 25%;">
+                    <ul style="list-style-type:none">
+                        <li style="padding-bottom:10px"><h3>Overview</h3></li>
+                        <li style="padding-bottom:10px">@Html.ActionLink("Press", "Press", "Home")</li>
+                        <li style="padding-bottom:10px">@Html.ActionLink("Sell A Car", "Index", "Sell")</li>
+                        <li style="padding-bottom:10px">@Html.ActionLink("Buy A Car", "Index", "Buy")</li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 25%;">
+                    <ul style="list-style-type:none">
+                        <li style="padding-bottom:10px"><h3>DriveOJoy</h3></li>
+                        <li style="padding-bottom:10px">@Html.ActionLink("About Us", "AboutUs", "Home")</li>
+                        <li style="padding-bottom:10px">@Html.ActionLink("Jobs", "Jobs", "Home")</li>
+                        <li style="padding-bottom:10px">@Html.ActionLink("Blog", "Blog", "Home")</li>
+                        <li style="padding-bottom:10px">@Html.ActionLink("Privacy Policy", "PrivacyPolicy", "Home")</li>
+                    </ul>
+                </div>
+                <div style="float: left; width: 25%;">
+                    <ul style="list-style-type:none">
+
+                        <li style="padding-bottom:10px"><h3>Support</h3></li>
+                        <li style="padding-bottom:10px">@Html.ActionLink("Contact Us", "ContactUs", "Home")</li>
+                        <li style="padding-bottom:10px">Call+91 7259280001</li>
+                    </ul>
+                </div>
+                <div style="float: right; width: 25%; padding-top:50px;">
+                    <ul style="list-style-type:none">
+                        <li style="padding-bottom:10px"><a href="https://support@driveojoy.com/">https://support@driveojoy.com/</a></li>
+                        <li style="padding-bottom:10px"><a href="https://www.facebook.com/driveojoy">https://www.facebook.com/driveojoy</a></li>
+                        <li style="padding-bottom:10px"><a href="https://twitter.com/driveojoy">https://twitter.com/driveojoy</a></li>
+                        <li style="padding-bottom:10px"><a href="https://www.linkedin.com/driveojoy">https://www.linkedin.com/driveojoy</a></li>
+                        <li style="padding-bottom:10px"><a href="https://plus.google.com/driveojoy">https://plus.google.com/driveojoy</a></li>
+                    </ul>
+                    <div class="fb-like" data-href="https://www.facebook.com/pages/DrivoJoy/1430785873891078" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                </div>
+            </footer>
+
+        </div>
+        
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+        <script src="jquery.dropdown.js"></script>
+        <script>
+            $(document).ready(function () {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+
+                
+                $(".select").dropdown({ "optionClass": "withripple" });
+                
+
+                $().dropdown({ autoinit: "select" });
+            });
+        </script>
+        @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+            <script src="~/Scripts/bootstrap.min.js"></script>*@
+</body>
+</html>
