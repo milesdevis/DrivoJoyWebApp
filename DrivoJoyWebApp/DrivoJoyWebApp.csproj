@@ -154,6 +154,8 @@
     <Content Include="Images\vintage-and-classic-cars-24v.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Controllers\BuyFormController.js" />
+    <Content Include="Scripts\Controllers\ExtraFormController.js" />
     <Content Include="Scripts\Controllers\LandingPageController.js" />
     <Content Include="Scripts\Controllers\SellFormController.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

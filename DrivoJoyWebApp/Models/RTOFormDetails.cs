@@ -18,7 +18,7 @@ public string  BuyerFullName {get; set;}
 public string DateOfTransfer {get; set;}
  public string VehicleNumber {get; set;}
 public string ChassisNumber {get; set;}
- public string registrationMark {get; set;}
+ public string RegistrationMark {get; set;}
  public string EngineNumber {get; set;}      //Is this string?
  public string SellerAddress {get; set;}
  public string BuyerAddress {get; set;}
