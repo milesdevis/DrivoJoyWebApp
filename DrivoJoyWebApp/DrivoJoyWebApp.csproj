@@ -186,12 +186,35 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BodyType.cs" />
+    <Compile Include="Models\BuyFormViewModel.cs" />
+    <Compile Include="Models\ExtraFormViewModel.cs" />
+    <Compile Include="Models\FormDetailsFolder\BuyerFullName.cs" />
+    <Compile Include="Models\FormDetailsFolder\BuyerAddress.cs" />
+    <Compile Include="Models\FormDetailsFolder\BuyerRTO.cs" />
+    <Compile Include="Models\FormDetailsFolder\Buyer_Son_Wife_Daughter_Of.cs" />
+    <Compile Include="Models\FormDetailsFolder\ChassisNumber.cs" />
+    <Compile Include="Models\FormDetailsFolder\DateOfTransfer.cs" />
+    <Compile Include="Models\FormDetailsFolder\EngineNumber.cs" />
+    <Compile Include="Models\FormDetailsFolder\FormSelected.cs" />
+    <Compile Include="Models\FormDetailsFolder\IsInvolvedInProhibitedGoods.cs" />
+    <Compile Include="Models\FormDetailsFolder\IsInvolvedInTheft.cs" />
+    <Compile Include="Models\FormDetailsFolder\IsSection53_54_55Pending.cs" />
+    <Compile Include="Models\FormDetailsFolder\IsUnderAgreement.cs" />
+    <Compile Include="Models\FormDetailsFolder\PendingTaxDetails.cs" />
+    <Compile Include="Models\FormDetailsFolder\PeriodOfStayInState.cs" />
+    <Compile Include="Models\FormDetailsFolder\PeriodUptoWhichVehicleTaxPaid.cs" />
+    <Compile Include="Models\FormDetailsFolder\RegistrationMark.cs" />
+    <Compile Include="Models\FormDetailsFolder\SellerAddress.cs" />
+    <Compile Include="Models\FormDetailsFolder\SellerFullName.cs" />
+    <Compile Include="Models\FormDetailsFolder\SellerRTO.cs" />
+    <Compile Include="Models\FormDetailsFolder\Seller_Son_Wife_Daughter_Of.cs" />
+    <Compile Include="Models\FormDetailsFolder\VehicleNumber.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\LandingPageViewModel.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Make.cs" />
     <Compile Include="Models\Model.cs" />
-    <Compile Include="Models\RTOFormDetails.cs" />
-    <Compile Include="Models\RTOFormDetailsViewModel.cs" />
+    <Compile Include="Models\SellFormViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -207,7 +230,9 @@
     <Content Include="Views\Form\Form_29.cshtml" />
     <Content Include="Views\Form\Form_28.cshtml" />
     <Content Include="Views\Form\Form_30.cshtml" />
-    <Content Include="Views\Form\Submit.cshtml" />
+    <Content Include="Views\Form\ExtraSubmit.cshtml" />
+    <Content Include="Views\Form\SellSubmit.cshtml" />
+    <Content Include="Views\Form\BuySubmit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

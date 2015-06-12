@@ -9,20 +9,30 @@
  //       var req = $http.get('/api/PersonInformationAPI');
  //     return req;
  //   }
-    this.submitInfo = function (Details) {
-        $http.post('/Form/Submit', Details);
+    this.SellSubmitInfo = function (Details) {
+        $http.post('/Form/SellSubmit', Details);
     };
 
+    this.ExtraSubmitInfo = function (Details) {
+        $http.post('/Form/ExtraSubmit', Details);
+    };
+    this.BuySubmitInfo = function (Details) {
+        $http.post('/Form/BuySubmit', Details);
+    };
 
     this.postInfo = function (Details) {
 
-        if (Details.FormSelected == 'Seller') {
-            if (Details.SellerRTO == Details.BuyerRTO) {
+        
+        
+        
+
+        if (Details[0] == 'Seller') {
+            if (Details[1] == Details[2]) {
                 $http.post('/Form/Form_29', Details);
 
             }
 
-            if (Details.SellerRTO != Details.BuyerRTO) {
+            if (Details[1] != Details[2]) {
                 $http.post('/Form/Form_28', Details);
 
             }
@@ -30,13 +40,13 @@
         }
 
 
-        if (Details.FormSelected == 'Buyer') {
-            if (Details.SellerRTO == Details.BuyerRTO) {
+        if (Details[0] == 'Buyer') {
+            if (Details[1] == Details[2]) {
                 $http.post('/Form/Form_30', Details);
 
             }
 
-            if (Details.SellerRTO != Details.BuyerRTO) {
+            if (Details[1] != Details[2]) {
                 $http.post('/Form/Form_28', Details);
 
             }

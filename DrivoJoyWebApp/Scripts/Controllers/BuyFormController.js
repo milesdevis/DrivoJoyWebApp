@@ -3,16 +3,16 @@
     $scope.submitForm = function () {
 
 
-        var Details = {};
+        var Details = [];
 
         //Make the Details.Transaction ID if needed
-        Details.SellerFullName = $scope.SellerFullName;
-        Details.Seller_Son_Wife_Duaghter_Of = $scope.Seller_Son_Wife_Duaghter_Of;
-        Details.BuyerFullName = $scope.BuyerFullName;
-        Details.DateOfTransfer = $scope.DateOfTransfer;
-        Details.RegistrationMark = $scope.RegistrationMark;
-        Details.Buyer_Son_Wife_Duaghter_Of = $scope.Buyer_Son_Wife_Duaghter_Of;
-        Details.BuyerAddress = $scope.BuyerAddress;
+        Details[0] = $scope.SellerFullName;
+        Details[1] = $scope.Seller_Son_Wife_Daughter_Of;
+        Details[2] = $scope.BuyerFullName;
+        Details[3] = $scope.DateOfTransfer;
+        Details[4] = $scope.RegistrationMark;
+        Details[5] = $scope.Buyer_Son_Wife_Daughter_Of;
+        Details[6] = $scope.BuyerAddress;
       
 
 

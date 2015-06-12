@@ -2,15 +2,15 @@
 
   
 
-   function submitForm () {
+    $scope.submitForm =  function () {
 
 
-        var Details = {};
+        var Details = [];
 
         //Make the Details.Transaction ID if required
-        Details.FormSelected = $scope.FormSelected;
-        Details.SellerRTO = $scope.SellerRTO;
-        Details.BuyerRTO = $scope.BuyerRTO;
+        Details[0] = $scope.FormSelected;
+        Details[1] = $scope.SellerRTO;
+        Details[2] = $scope.BuyerRTO;
 
 
          RTOFormService.postInfo(Details);
@@ -21,7 +21,7 @@
         });
          */
    }
-   $scope.submitForm = submitForm;
+   
 
     };
 

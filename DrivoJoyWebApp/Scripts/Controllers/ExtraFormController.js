@@ -3,22 +3,47 @@
     $scope.submitForm = function () {
 
 
-        var Details = {};
+        var Details = [];
 
         //Make the Details.Transaction ID if needed
-        Details.SellerFullName = $scope.SellerFullName;
-        Details.Buyer_Son_Wife_Duaghter_Of = $scope.Buyer_Son_Wife_Duaghter_Of;
-        Details.BuyerFullName = $scope.BuyerFullName;
-        Details.DateOfTransfer = $scope.DateOfTransfer;
-        Details.VehicleNumber = $scope.VehicleNumber;
-        Details.ChassisNumber = $scope.ChassisNumber;
-        Details.EngineNumber = $scope.EngineNumber;
-        Details.SellerAddress = $scope.SellerAddress;
-        Details.BuyerAddress = $scope.BuyerAddress;
-        Details.Make = $scope.Make;
+        Details[0] = $scope.BuyerFullName;
+        Details[1] = $scope.SellerFullName;
+        Details[2] = $scope.Seller_Son_Wife_Daughter_Of;
+        Details[3] = $scope.VehicleNumber;
+        Details[4] = $scope.EngineNumber;
+        Details[5] = $scope.ChassisNumber;
+        Details[6] = $scope.PeriodOfStayInState;
+        Details[7] = $scope.PeriodUptoWhichVehicleTaxPaid;
+
+        if ($scope.ImportantDetails.PendingTaxDetails.$pristine)
+            Details[8] = "null";
+        else
+            Details[8] = $scope.ImportantDetails.PendingTaxDetails;
+
+        if ($scope.ImportantDetails.IsInvolvedInTheft.$pristine)
+            Details[9] = "null";
+        else
+            Details[9] = $scope.ImportantDetails.IsInvolvedInTheft;
+
+        if ($scope.ImportantDetails.IsSection53_54_55Pending.$pristine)
+            Details[10] = "null";
+        else
+            Details[10] = $scope.ImportantDetails.IsSection53_54_55Pending;
+
+        if ($scope.ImportantDetails.IsInvolvedInProhibitedGoods.$pristine)
+            Details[11] = "null";
+        else
+            Details[12] = $scope.ImportantDetails.IsInvolvedInProhibitedGoods;
 
 
-        RTOFormService.SubmitInfo(Details);
+        if ($scope.ImportantDetails.IsUnderAgreement.$pristine)
+            Details[13] = "null";
+        else
+            Details[13] = $scope.ImportantDetails.IsUnderAgreement;
+        
+
+
+        RTOFormService.ExtraSubmitInfo(Details);
         /* promisePost.then(function (d) {
              $scope.PersonId = d.data.TransactionId; //Remember to increment transactionid somehow later at the backend
          }, function (err) {

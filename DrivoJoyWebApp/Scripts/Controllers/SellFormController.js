@@ -3,22 +3,22 @@
    $scope.submitForm = function () {
 
 
-       var Details = {};
+       var Details = [];
 
        //Make the Details.Transaction ID if needed
-        Details.SellerFullName = $scope.SellerFullName;
-        Details.Buyer_Son_Wife_Duaghter_Of = $scope.Buyer_Son_Wife_Duaghter_Of;
-        Details.BuyerFullName = $scope.BuyerFullName;
-        Details.DateOfTransfer = $scope.DateOfTransfer;
-        Details.VehicleNumber = $scope.VehicleNumber;
-        Details.ChassisNumber = $scope.ChassisNumber;
-        Details.EngineNumber = $scope.EngineNumber;
-        Details.SellerAddress = $scope.SellerAddress;
-        Details.BuyerAddress = $scope.BuyerAddress;
-        Details.Make = $scope.Make;
+        Details[0] = $scope.SellerFullName;
+        Details[1] = $scope.Buyer_Son_Wife_Daughter_Of;
+        Details[2] = $scope.BuyerFullName;
+        Details[3] = $scope.DateOfTransfer;
+        Details[4] = $scope.VehicleNumber;
+        Details[5] = $scope.ChassisNumber;
+        Details[6] = $scope.EngineNumber;
+        Details[7] = $scope.SellerAddress;
+        Details[8] = $scope.BuyerAddress;
+       
 
 
-         RTOFormService.SubmitInfo(Details);
+         RTOFormService.SellSubmitInfo(Details);
        /* promisePost.then(function (d) {
             $scope.PersonId = d.data.TransactionId; //Remember to increment transactionid somehow later at the backend
         }, function (err) {

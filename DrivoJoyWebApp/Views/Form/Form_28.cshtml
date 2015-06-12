@@ -1,24 +1,30 @@
-﻿@model DrivoJoyWebApp.Models.RTOFormDetailsViewModel
+﻿@model DrivoJoyWebApp.Models.LandingPageViewModel
 
 <div ng-app="RTOForms" ng-controller="ExtraFormController">
 
     <div style="padding-left:4px;padding-top:5px;"><h2>Seller Details</h2></div>
     <div style="padding-left:2px;">
-        <input style="width:10px;height:4px;padding-top:6px;" type="text" ng-model="SellerFullName" placeholder="Full Name" />
-        <input style="width:15px;height:4px;padding-top:4px;" type="text" ng-model="SellerAddress" placeholder="Address" />
+        
+            <input style="width:10px;height:4px;padding-top:6px;" type="text" ng-model="BuyerFullName" placeholder="Buyer Full Name" />
+            <input style="width:10px;height:4px;padding-top:4px;" type="text" ng-model="SellerFullName" placeholder="Your Full Name" />
 
-        <div style="float:left; width:8px;height:4px;padding-top:4px;padding-right:2px"><input type="text" ng-model="DateOfTransfer" placeholder="Transaction Date" /></div>
-        <div style="float:right; width:8px;height:4px;padding-top:4px;"><input type="text" ng-model="VehicleNumber" placeholder="Vehicle Number" /></div>
+            <div style="float:left; width:10px;height:4px;padding-top:4px;padding-right:2px"><input type="text" ng-model="Seller_Son_Wife_Duaghter_Of" placeholder="Son/Wife/Daughter of.." /></div>
+            <div style="float:right; width:8px;height:4px;padding-top:4px;"><input type="text" ng-model="VehicleNumber" placeholder="Vehicle Number" /></div>
 
-        <div style="float:left; width:6px;height:4px;padding-top:4px;padding-right:2px"><input type="text" ng-model="Make" placeholder="Make of vehicle" /></div>
-        <div style="float:right; width:8px;height:4px;padding-top:4px;"><input type="text" ng-model="ChassisNumber" placeholder="Chassis Number" /></div>
+            <div style="float:left; width:6px;height:4px;padding-top:4px;padding-right:2px"><input type="text" ng-model="EngineNumber" placeholder="Engine Number" /></div>
+            <div style="float:right; width:8px;height:4px;padding-top:4px;"><input type="text" ng-model="ChassisNumber" placeholder="Chassis Number" /></div>
 
-        <div style="float:left; width:8px;height:4px;padding-top:4px;padding-right:2px"><input type="text" ng-model="EngineNumber" placeholder="Engine Number" /></div>
-        <div style="float:right; width:10px;height:4px;padding-top:4px;"><input type="text" ng-model="BuyerFullName" placeholder="Full Name Of Buyer" /></div>
+            <div style="float:left; width:10px;height:4px;padding-top:4px;padding-right:2px"><input type="text" ng-model="PeriodOfStayInState" placeholder="Period of stay in the state" /></div>
+            <div style="float:right; width:10px;height:4px;padding-top:4px;"><input type="text" ng-model="PeriodUptoWhichVehicleTaxPaid" placeholder="Period upto which vehicle task has been paid" /></div>
+       
+         <span ng-form="ImportantDetails">
+            <input style="width:10px;height:10px;padding-top:4px;" type="text" ng-model="PendingTaxDetails" placeholder="Pending tax details if any.." />
+            <input style="width:15px;height:10px;padding-top:4px;" type="text" ng-model="IsInvolvedInTheft" placeholder="If the vehicle is involved in theft, give details.." />
+            <input style="width:15px;height:10px;padding-top:4px;" type="text" ng-model="IsSection53_54_55Pending" placeholder="Whether any action under Section 53,54 or 55 of the Motor Vehicle Act is pending, give details..." />
+            <input style="width:15px;height:10px;padding-top:4px;" type="text" ng-model="IsInvolvedInProhibitedGoods" placeholder="If vehicle is involed  in transport of prohibited goods, give details.." />
+            <input style="width:15px;height:10px;padding-top:4px;" type="text" ng-model="IsUnderAgreement" placeholder="If vehicle is under agreement of hire-purchase/Lease/Hypothetication, give details.." />
 
-        <input style="width:15px;height:4px;padding-top:4px;" type="text" ng-model="BuyerAddress" placeholder="Address Of Buyer" />
-        <input style="width:15px;height:4px;padding-top:4px;" type="text" ng-model="Buyer_Son_Wife_Duaghter_Of" placeholder="Buyer is son/wife/daughter of.." />
-
+        </span>
     </div>
     <div style="padding-left:7px;padding-top:5px;">
         <input type="button" class="btn btn-primary" value="Submit Details" ng-click="submitForm()" />        <!--Yet to add 'save' feature-->
